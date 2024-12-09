@@ -12,15 +12,16 @@ const typeDefs = gql`
         id: ID! 
         username: String! 
         email: String! 
-        token: String 
     } 
     type Query { 
-        getShoppingList(userId: ID!): [Item!] 
+        getShoppingList: [Item!] 
     } 
     type Mutation { 
         addItem(name: String!, quantity: Int!, category: String!):Item 
         updateItem(id: ID!, name: String, quantity: Int, category: String, purchased: Boolean): Item 
         deleteItem(id: ID!): Boolean 
+        signIn(username:String!,email:String!,password:String!):String!
+        signUp(username:String!,email:String!,password:String!):String!
     }
 `;
 
