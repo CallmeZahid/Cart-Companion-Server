@@ -39,7 +39,7 @@ app.get('/',(req,res)=>{
 server.start().then(()=>{
     server.applyMiddleware({ app, path: '/api' });
     app.listen(port,()=>{
-        console.log(`server is listening at http://localhost:${port}${server.graphqlPath}`);
+        console.log(`server is listening at http://cart-lister.onrender.com/${port}${server.graphqlPath}`);
     })
 })
 
