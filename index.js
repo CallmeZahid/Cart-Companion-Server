@@ -41,7 +41,7 @@ const server = new ApolloServer({
 });
 
 app.get('/',(req,res)=>{
-    res.send('Hello World');
+    res.send(`https://zippy-crepe-528398.netlify.app`);
 })
 
 server.start().then(()=>{
